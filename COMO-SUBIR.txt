@@ -1,0 +1,40 @@
+BASIS ESENCIAL PRO — HOME QR
+============================
+
+Sitio estatico liviano para el codigo QR del producto.
+
+ESTRUCTURA
+----------
+  index.html              -> pagina principal (el QR debe apuntar aqui)
+  assets/
+    styles.css            -> estilos, colores y tipografias
+    esencial-opt.webp     -> imagen del producto (optimizada)
+    logo-basis-blanco.png -> logo BASIS
+  fonts/
+    Helvena-Regular.woff2
+    Helvena-Medium.woff2
+    Helvena-Semibold.woff2
+  ficha-tecnica.pdf        -> se abre en pestana nueva
+  ficha-seguridad.pdf      -> se abre en pestana nueva
+
+1) SUBIR A GITHUB
+-----------------
+  - Crea un repositorio nuevo (vacio) en GitHub.
+  - Sube TODA esta carpeta (con assets/ y fonts/ incluidas) a la raiz del repo.
+    Manten la misma estructura de carpetas.
+
+2) DESPLEGAR EN VERCEL
+----------------------
+  - En Vercel: Add New... -> Project -> Import (selecciona el repositorio).
+  - Framework Preset: Other  (es un sitio estatico, NO requiere build).
+  - Build Command: vacio.   Output Directory: vacio (raiz).
+  - Deploy. La URL servira index.html.
+  - Apunta el codigo QR impreso a esa URL. El QR siempre va al HOME, nunca al PDF.
+
+3) ACTUALIZAR LAS FICHAS
+------------------------
+  - Reemplaza ficha-tecnica.pdf o ficha-seguridad.pdf conservando el MISMO
+    nombre de archivo. El QR y el home no cambian.
+
+Nota: si abres index.html con doble clic (file://) algunos navegadores no
+muestran los PDF embebidos; en GitHub/Vercel (https) funciona con normalidad.
